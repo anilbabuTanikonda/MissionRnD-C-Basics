@@ -16,6 +16,7 @@ Points to Follow for the whole C course :
 
 //Do not Edit below Header Files
 #include <stdio.h>
+#include<conio.h>
 #include "FunctionHeadersBasics.h"
 
 int main(){
@@ -23,35 +24,39 @@ int main(){
 	
 	//Test Sum of numbers
 	
-	int sumTemp = sum(4, 3);
+	int sumTemp = sum(4, -5);
 	printf("%d\n", sumTemp);
 	
 	//Test Count file
 	
-	int countTemp = count(5, 20);
+	int countTemp = count(5, 84);
 	printf("%d\n", countTemp);
 
 
 	//Test Swap
-	int a = 5, b = 7;
+	int a = 8, b = 9;
 	swap(&a, &b);
 	printf("%d %d\n", a, b);
 
 	//Is Older 
-	char date1[20] = "29-02-2004";
-	char date2[20] = "29-02-2000";
+	char date1[20] = "29-0A-2001";
+	char date2[20] = "15-07-2000";
 	int check=isOlder(date1, date2);
 	if (check == 0){
 		printf("Both are of same age \n");
 	}
-	else{
+	else if (check == 1 || check == 2)
+	{
 		printf("%d person is Older \n", check);
+	}
+	else{
+		printf("-1\n");
 	}
 
 	//Variable Arguments
 	int total = variableArguments(3, 20, 90, 98);
 	printf("There are %d students greater than 90\n", total);
 	
-	
+	getch();
 	return 0;
 }
